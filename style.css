@@ -16,8 +16,10 @@
     word-wrap: break-word;
     margin: auto 0;
 
-    font-size: 1.8vw;
+    font-size: 30px;
 }
+
+body{background: linear-gradient(to bottom, #FED6B3 0%, #B7718D 72%);}
 
 main{
     width: 75vw;
@@ -25,7 +27,7 @@ main{
     margin: 0 auto;
     background-color: var(--color-box);
     text-align: left;
-    
+    padding-bottom: 150px;
 }
 
 header{
@@ -42,17 +44,24 @@ header{
 
 section
 {
-    padding: 0 8vw;
+    padding: 0 8vh;
 
-    .about {
+    #about, #guide {
         display: flex;
         gap: 1px;
         justify-content: space-between;
-        text-align: left;
         margin: 0 auto;
+
+        #itens {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            img {width: 13vw};
+        }
     } 
 
-    .engine_icons {
+    #engine_icons {
         padding-top: 50px;
         display: flex;
         justify-content: center;
