@@ -1,0 +1,69 @@
+
+:root{
+    --default-text-color: #9C4386;
+    --status-text-color: #873F7A;
+    --color-box: #FAE4C0;
+}
+
+#pixel {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+*{
+    color: var(--default-text-color);
+
+    word-wrap: break-word;
+    margin: auto 0;
+
+    font-size: 1.8vw;
+}
+
+main{
+    width: 75vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--color-box);
+    text-align: left;
+    
+}
+
+header{
+    color: var(--status-text-color);
+    text-align: center;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        width: 100%;
+    }
+}
+
+section
+{
+    padding: 0 8vw;
+
+    .about {
+        display: flex;
+        gap: 1px;
+        justify-content: space-between;
+        text-align: left;
+        margin: 0 auto;
+    } 
+
+    .engine_icons {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+        img {width: 4vw}
+    }
+}
+
+
+
+
+
+
+
