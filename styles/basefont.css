@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Podkova:wght@400..800&display=swap');
+
+:root
+{
+    --default-text-color: #9C4386;
+    --status-text-color: #873F7A;
+}
+
+body{
+    font-family: "Geom", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--default-text-color);
+
+}
+
+#pixel {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+strong {
+    font-weight: 600;       
+    background: linear-gradient(to bottom, #483155 60%, #FFBF6F);
+
+    box-sizing: content-box;
+    text-box: 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+     -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Center Bar */
+main{
+    width: calc(75vw + 5rem);
+    min-width: 15vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--color-box);
+    text-align: left;
+    padding-bottom: 150px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.title::after,
+.title::before
+{
+    content: "";
+    flex: 1;
+    height: 1.5px;
+    background-color: #9C4386;
+    border-radius: 80px;
+    margin: 0 8px;
+}

@@ -1,0 +1,28 @@
+:root{
+    --scale-min-anim: 1.1;
+    --scale-max-anim: 1.2;
+
+    --animation-hover-trans-time: .8s
+}
+
+.laptop:hover {
+    cursor: pointer;
+    animation: laptop_hover, laptop_hover_idle;
+    animation-duration: var(--animation-hover-trans-time), 3s;
+    animation-delay: 0s, var(--animation-hover-trans-time);
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-in-out, ease-in-out;
+}
+
+@keyframes laptop_hover 
+{
+    from {scale: 1}
+    to   {scale: var(--scale-max-anim)}
+}
+
+@keyframes laptop_hover_idle 
+{
+    0%   {scale: var(--scale-max-anim)}
+    50%  {scale: var(--scale-min-anim)}
+    100% {scale: var(--scale-max-anim)}
+}

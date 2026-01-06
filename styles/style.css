@@ -1,17 +1,14 @@
 
 :root{
-    --default-text-color: #9C4386;
-    --status-text-color: #873F7A;
+
     --color-box: #FAE4C0;
 
-    --bg-color: linear-gradient(to bottom, #FED6B3 0%, #B7718D 72%)
+    --bg-color: linear-gradient(to bottom, #FED6B3 0%, #B7718D 72%);
 
     /* --scale-guide-image: 10% * 1rem */
 }
 
 *{
-    color: var(--default-text-color);
-
     word-wrap: break-word;
     margin: auto 0;
     
@@ -22,18 +19,10 @@
 
 body{background: var(--bg-color);}
 
-main{
-    width: 75vw;
-    min-height: 100vh;
-    margin: 0 auto;
-    background-color: var(--color-box);
-    text-align: left;
-    padding-bottom: 150px;
-}
-
 header{
     color: var(--status-text-color);
     text-align: center;
+    
     div {
         display: flex;
         align-items: center;
@@ -45,14 +34,10 @@ header{
 
 section
 {
-    padding: 0 8vw;
-
+    padding: 0 8%;
 
     #about, #guide {
         display: flex;
-        /* flex-direction: column; */
-
-        gap: 1px;
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
@@ -60,25 +45,41 @@ section
         #text {width: 50%}
 
 
-        #itens {
+        #laptops 
+        {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
+
+            img 
+            {
+                max-width: 40%;
+                min-width: 100px;
+                width: 300px
+            }
         }
 
-        @media (max-width: 600px) {
+        /* Detect to broke the flex */
+        @media (max-width: 700px) 
+        {
             flex-direction: column-reverse;
             #text {width: 100%}
         }
     } 
 
-    #guide img {
-        max-width: 40%;
-        width: 10% * 1rem
+    #guide {justify-content: center};
+
+
+    #about img 
+    {
+        width: 400px;
+        max-width: 50%;
     }
 
-    #engine_icons {
+
+    #engines 
+    {
         padding-top: 50px;
         display: flex;
         flex-wrap: wrap;
