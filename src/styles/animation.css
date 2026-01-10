@@ -14,6 +14,25 @@
     animation-timing-function: ease-in-out, ease-in-out;
 }
 
+/* .alert {
+    animation: slide 1s ease-out;
+    animation-direction: reverse;
+    
+} */
+
+@keyframes slide
+{
+    from {
+        /* right: -1000px; */
+        transform: translateX(100vw);
+        opacity: 0;
+        }
+    to {
+        transform: translateX(0vw);
+        opacity: 1;
+        ;}
+} 
+
 @keyframes laptop_hover 
 {
     from {scale: 1}

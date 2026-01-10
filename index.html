@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nati Commission</title>
-    <link rel="stylesheet" href="styles/basefont.css">
-    <link rel="stylesheet" href="styles/animation.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="src/styles/basefont.css">
+    <link rel="stylesheet" href="src/styles/animation.css">
+    <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
     <main>
 
-    
     <header>
-        <img width="300px" src="images/logo.png" id="pixel" alt="Logo Nati Commission">
+        <img width="300px" src="src/assets/logo.png" id="pixel" alt="Logo Nati Commission">
         <div id="social">
             <a href="https://x.com/Nait0001" target="_blank"> 
-                <img width="100%" src="images/icons/contacts/twitter.png" alt="icon-twitter"> </a>
+                <img src="src/assets/icons/contacts/twitter.png" alt="click to acess my twitter account"> </a>
 
             <a href="https://www.instagram.com/_natihx" target="_blank"> 
-                <img width="100%" src="images/icons/contacts/insta.png" alt="icon-youtube"> </a>
+                <img src="src/assets/icons/contacts/insta.png" alt="click to acess my instagram account"> </a>
 
             <a href="https://www.youtube.com/@natihx" target="_blank"> 
-                <img width="100%" src="images/icons/contacts/youtube.png" alt="icon-youtube"> </a>
+                <img src="src/assets/icons/contacts/youtube.png" alt="click to acess my youtube account"> </a>
                 
             <a href="https://ko-fi.com/nait0001" target="_blank"> 
-                <img width="100%" src="images/icons/contacts/kofi.png" alt="icon-youtube"> </a>
+                <img src="src/assets/icons/contacts/kofi.png" alt="click to acess my kofi account"> </a>
+
+            <a href="https://discord.gg/rdYUCRVhGv" target="_blank"> 
+                <img src="src/assets/icons/contacts/discord.png" alt="click to acess my discord server"> </a>
         </div>
 
         <br>
-        <p><strong>Commission Status:<br><span id="status">!OPEN!</span></strong></p>
+        <p><strong>Commission Status:<br>!<span id="status">LOADING...</span>!</strong></p>
     </header>
     
     <section>
@@ -53,18 +55,18 @@
                 </ul>
             </div>
 
-            <img  src="images/natiabout.png" id="pixel" alt="nati image">
+            <img  src="src/assets/natiabout.png" id="pixel" alt="nati image">
         </div>
 
         <div id="engines">
-            <img src="images/icons/engines/godot.png" alt="godot icon">
-            <img src="images/icons/engines/gm.png" alt="game maker icon">
-            <img src="images/icons/engines/haxe.png" alt="haxe icon">
-            <img src="images/icons/engines/lua.png" alt="lua script icon">
+            <img src="src/assets/icons/engines/godot.png" alt="godot icon">
+            <img src="src/assets/icons/engines/gm.png" alt="game maker icon">
+            <img src="src/assets/icons/engines/haxe.png" alt="haxe icon">
+            <img src="src/assets/icons/engines/lua.png" alt="lua script icon">
             
-            <img src="images/icons/engines/html.png" alt="frontend html icon">
-            <img src="images/icons/engines/css.png" alt="frontend css icon">
-            <img src="images/icons/engines/js.png" alt="frontend javascript icon">
+            <img src="src/assets/icons/engines/html.png" alt="frontend html icon">
+            <img src="src/assets/icons/engines/css.png" alt="frontend css icon">
+            <img src="src/assets/icons/engines/js.png" alt="frontend javascript icon">
            
         </div>
 
@@ -74,10 +76,16 @@
         <h2 class="title"> Guia </h2>
         <div id="guide">
             <div id="laptops">
-                <img id="pixel" class="laptop" src="images/guide/port.png" alt="">
-                <img id="pixel" class="laptop" src="images/guide/price.png" alt="">
+                <a href="https://trello.com/b/j04AXmnd" target="_blank">
+                    <img id="pixel" class="laptop" src="src/assets/guide/pt-br/price.png" alt="">
+                </a>
+                
+                <a href="https://trello.com/b/j04AXmnd" target="_blank">
+                    <img id="pixel" class="laptop" src="src/assets/guide/pt-br/port.png" alt="">
+                </a>
             </div>
-            <img id="pixel" style="width: 500px; max-width: 100%;" src="images/guide/select.png" alt="">
+
+            <img id="pixel" style="width: 500px; max-width: 100%;" src="src/assets/guide/pt-br/select.png" alt="">
         </div>
     </section>
 
@@ -92,14 +100,29 @@
 
     <section>
         <h2 class="title"> Importante </h2>
-        <ul>
+        <ul> 
             <li> A correção de bugs, obviamente, não é cobrada. </li>
-            <li> Formas de pagamento somente PIX e PAYPAL. </li>
+            <li> Formas de pagamento somente <strong>PIX</strong> e <strong>PAYPAL</strong>. </li>
             <li> Peço permissão antes de divulgar os projetos finalizados das comissões que programei. </li>
             <li> Sem reembolso caso não haja satisfação com o projeto final. </li>
             <li> Caso vá postar você mesmo, por favor, me dê os créditos.. </li>
         </ul>
     </section>
+
+    <section>
+        <h2 class="title"> Exemplos em Destaque </h2>
+
+    </section>
+
+    <section>
+        <h2 class="title"> Creditos </h2>
+    </section>
     </main>
+
+    <div id="alerts">
+
+    </div>
+
+    <script src="src/script/status.js" type="module"></script>
 </body>
 </html>
