@@ -10,119 +10,126 @@
 </head>
 <body>
     <main>
+    <select name="Idioma" id="language-list">
+        <option value="pt-br">Português</option>
+        <option value="en" selected>English</option>
+    </select>
 
     <header>
-        <img width="300px" src="src/assets/logo.png" id="pixel" alt="Logo Nati Commission">
+        <img width="300px" src="assets/logo.png" id="pixel" alt="Logo Nati Commission">
         <div id="social">
             <a href="https://x.com/Nait0001" target="_blank"> 
-                <img src="src/assets/icons/contacts/twitter.png" alt="click to acess my twitter account"> </a>
+                <img src="assets/icons/contacts/twitter.png" alt="click to acess my twitter account"> </a>
 
             <a href="https://www.instagram.com/_natihx" target="_blank"> 
-                <img src="src/assets/icons/contacts/insta.png" alt="click to acess my instagram account"> </a>
+                <img src="assets/icons/contacts/insta.png" alt="click to acess my instagram account"> </a>
 
             <a href="https://www.youtube.com/@natihx" target="_blank"> 
-                <img src="src/assets/icons/contacts/youtube.png" alt="click to acess my youtube account"> </a>
+                <img src="assets/icons/contacts/youtube.png" alt="click to acess my youtube account"> </a>
                 
             <a href="https://ko-fi.com/nait0001" target="_blank"> 
-                <img src="src/assets/icons/contacts/kofi.png" alt="click to acess my kofi account"> </a>
+                <img src="assets/icons/contacts/kofi.png" alt="click to acess my kofi account"> </a>
 
             <a href="https://discord.gg/rdYUCRVhGv" target="_blank"> 
-                <img src="src/assets/icons/contacts/discord.png" alt="click to acess my discord server"> </a>
+                <img src="assets/icons/contacts/discord.png" alt="click to acess my discord server"> </a>
         </div>
 
         <br>
-        <p><strong>Commission Status:<br>!<span id="status">LOADING...</span>!</strong></p>
+        <p class="lang">status-commission-text</p>
     </header>
     
     <section>
-        <h2 class="title"> Sobre Mim </h2>
+        <h2 class="title lang">title-about</h2>
         <div id="about">
             <div id="text">
-                <p>
-                    Olá, sou a Nati, programadora freelancer!
-                    <br>
-                    Adoro ajudar projetos e, nas horas vagas, gosto de desenhar e aprender coisas novas.
-                    <br>
-                    <br>
-                    Tenho conhecimento das tecnologias:
-                </p>
+                <p class="lang">about</p>
                 
                 <ul>
-                    <li> Haxeflixel e Lua </li>
+                    <li> Haxeflixel/Lua (FNF) </li>
                     <li> Godot </li>
-                    <li> Game Maker </li>
+                    <!-- <li> Roblox Lua </li> -->
                     <li> Front-End Web </li>
                 </ul>
             </div>
 
-            <img  src="src/assets/natiabout.png" id="pixel" alt="nati image">
+            <img  src="assets/natiabout.png" id="pixel" alt="nati image">
         </div>
 
         <div id="engines">
-            <img src="src/assets/icons/engines/godot.png" alt="godot icon">
-            <img src="src/assets/icons/engines/gm.png" alt="game maker icon">
-            <img src="src/assets/icons/engines/haxe.png" alt="haxe icon">
-            <img src="src/assets/icons/engines/lua.png" alt="lua script icon">
+            <img src="assets/icons/engines/godot.png" alt="godot icon">
+            <img src="assets/icons/engines/gm.png" alt="game maker icon">
+            <img src="assets/icons/engines/haxe.png" alt="haxe icon">
+            <img src="assets/icons/engines/lua.png" alt="lua script icon">
             
-            <img src="src/assets/icons/engines/html.png" alt="frontend html icon">
-            <img src="src/assets/icons/engines/css.png" alt="frontend css icon">
-            <img src="src/assets/icons/engines/js.png" alt="frontend javascript icon">
+            <img src="assets/icons/engines/html.png" alt="frontend html icon">
+            <img src="assets/icons/engines/css.png" alt="frontend css icon">
+            <img src="assets/icons/engines/js.png" alt="frontend javascript icon">
            
         </div>
 
     </section>
 
     <section>
-        <h2 class="title"> Guia </h2>
+        <h2 class="title lang">title-guide</h2>
         <div id="guide">
             <div id="laptops">
                 <a href="https://trello.com/b/j04AXmnd" target="_blank">
-                    <img id="pixel" class="laptop" src="src/assets/guide/pt-br/price.png" alt="">
+                    <img id="pixel" class="laptop" src="assets/guide/pt-br/price.png" alt="">
                 </a>
                 
                 <a href="https://trello.com/b/j04AXmnd" target="_blank">
-                    <img id="pixel" class="laptop" src="src/assets/guide/pt-br/port.png" alt="">
+                    <img id="pixel" class="laptop" src="assets/guide/pt-br/port.png" alt="">
                 </a>
             </div>
 
-            <img id="pixel" style="width: 500px; max-width: 100%;" src="src/assets/guide/pt-br/select.png" alt="">
+            <img id="pixel" style="width: 500px; max-width: 100%;" src="assets/guide/pt-br/select.png" alt="">
         </div>
     </section>
 
     <section>
-        <h2 class="title"> Passo a Passo </h2>
-        <ul>
-            <li> Para me pedir comissões, é só me enviar dm no <strong>Discord</strong> ou <strong>Twitter</strong> (nait0001 em ambos)! </li>
-            <li> A negociação do pagamento é bem simples: você descreve o que deseja e, a partir disso, faço a estimativa de preço e prazo de entrega. </li>
-            <li> Caso queira, podemos call para ver o andamento do projeto. </li>
-        </ul>
+        <h2 class="title lang">title-bit-by-bit</h2>
+        <ul class="lang">bit-by-bit</ul>
     </section>
 
     <section>
-        <h2 class="title"> Importante </h2>
-        <ul> 
-            <li> A correção de bugs, obviamente, não é cobrada. </li>
-            <li> Formas de pagamento somente <strong>PIX</strong> e <strong>PAYPAL</strong>. </li>
-            <li> Peço permissão antes de divulgar os projetos finalizados das comissões que programei. </li>
-            <li> Sem reembolso caso não haja satisfação com o projeto final. </li>
-            <li> Caso vá postar você mesmo, por favor, me dê os créditos.. </li>
-        </ul>
+        <h2 class="title lang">title-important</h2>
+        <ul class="lang">important</ul>
     </section>
 
     <section>
-        <h2 class="title"> Exemplos em Destaque </h2>
+        <h2 class="title lang"> Destaques </h2>
 
     </section>
 
     <section>
-        <h2 class="title"> Creditos </h2>
+        <h2 class="title lang"> Creditos </h2>
+        <footer>
+
+            <div>
+                <a href="https://x.com/_YuBiNhu"  target="_blank">
+                    <img src="assets/icons/credits/yubo.png" alt="yub icon">
+                </a>
+                <h3> YUBO </h3>
+                <p> Toda a arte do site </p>
+            </div>
+            
+            <div>
+                <a href="https://x.com/Nait0001" target="_blank">
+                    <img src="assets/icons/credits/nati.png"  alt="yub icon">
+                </a>
+                <h2> NATI </h2>
+                <p> Todo o site </p>
+            </div>
+
+        </footer>
     </section>
     </main>
 
     <div id="alerts">
-
+        
     </div>
 
+    <script src="src/script/localization.js" type="module"></script>
     <script src="src/script/status.js" type="module"></script>
 </body>
 </html>

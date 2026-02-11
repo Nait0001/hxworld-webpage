@@ -50,8 +50,8 @@ function getAlertText(command)
                 {
                     return 'Opa! parece que algum erro aconteceu em relacao na atualizacao do estado da commision, por favor atualize a pagina'
                 }
-                return 'Testo sexual'
-            case '$error:generic':
+                return ''
+            case 'error:generic':
                 if (language === 'pt-br')
                 {
                     return "Opa! Aconteceu algum erro, nao sabemos onde veio, atualize a pagina para conserta-lo, talvez"
@@ -62,4 +62,43 @@ function getAlertText(command)
     }
     
     return command
+}
+
+// Signal Part
+let signalList = {}
+function createSignal(name)
+{
+    signalList[name] = {
+        called: 0,
+        callbacks: [],
+    }
+
+    console.log(signalList)
+}
+
+export function connectSignal(name, callback, detectHasCalled = true)
+{
+    if (!Object.hasOwn(signalList, name)) createSignal(name)
+    const CALLED = signalList[name].called
+    
+    signalList[name].callbacks.push(callback)
+    if (CALLED > 0 && detectHasCalled) callback(CALLED)
+    // signalList[name].push(callback)
+}
+
+export function emmitSignal(name)
+{
+    if (!Object.hasOwn(signalList, name)) createSignal(name)
+    
+    const CALLBACKS = signalList[name].callbacks
+    
+    signalList[name].called += 1
+    if (CALLBACKS.length > 0)
+    {
+        for (const call of CALLBACKS)
+        {
+            call(signalList[name].called)
+        }
+    }
+
 }

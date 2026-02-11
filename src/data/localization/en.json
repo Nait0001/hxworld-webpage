@@ -1,0 +1,37 @@
+{
+    "status-commission-text": "<strong>Commission Status:<br>!<span id=\"status\">LOADING...</span>!</strong>",
+    "status-commision-states": {
+        "wait": "LOADING...",
+        "closed": "CLOSED",
+        "full": "FULL",
+        "open": "OPEN",
+        "error": "ERROR"
+    },
+
+    "title-guide": "Guide",
+
+
+    "title-about": "About Me",
+    "about": [
+        "Hi, I'm Nati, a freelance developer!",
+        "I love helping projects and, in my free time, I enjoy drawing and learning new things",
+        "<br>I have experience with the following technologies:"
+    ],
+
+    "title-bit-by-bit": "Bit by Bit",
+    "bit-by-bit": [
+        "To request a commission, just send me a DM on <strong>Discord</strong> or <strong>Twitter</strong> (nait0001 on both)!",
+        "The payment negotiation is very simple: you describe what you want, and based on that, I'll provide a price estimate and delivery timeframe.",
+        "If you'd like, we can hop on a call to check the project's progress."
+    ],
+
+    "title-important": "Important",
+    "important": [
+        "Bug fixes, obviously, are free of charge.",
+        "Payment methods: <strong>PIX</strong> and <strong>PayPal</strong> only.",
+        "I always ask for permission before showcasing finished commission projects in my portfolio.",
+        "No refunds if you are unsatisfied with the final project.",
+        "If you post it yourself, please make sure to give me credit."
+    ]
+
+}

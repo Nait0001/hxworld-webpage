@@ -1,4 +1,6 @@
-import {spawnAlert} from './utils.js';
+import {spawnAlert, connectSignal} from './utils.js';
+import {languageJson} from './localization.js';
+
 
 const COMMISSION_STATE = {
     CLOSED: 0,
@@ -9,12 +11,35 @@ const COMMISSION_STATE = {
 }
 
 var commState = COMMISSION_STATE.WAIT; 
-let statusText = document.getElementById("status")
+var commStateConfig = {
+    id: 'wait',
+    max: 0,
+    cur: 0,
+}
 
 const PATH = 'https://trello.com/b/j04AXmnd.json'
 const LIST_NAME = ['To do', 'Working']
-// 'https://trello.com/b/j04AXmnd.json'
 
+function updateCommText()
+{
+    let statusText = document.getElementById("status")
+    let lang = languageJson['status-commision-states']
+    let curStateName = lang[commStateConfig.id]
+    
+    if (curStateName)
+    {
+        let boundComm = `${commStateConfig.max}/${commStateConfig.cur}`
+        let isOpen = commState === COMMISSION_STATE.OPEN
+        
+        console.log(curStateName)
+        statusText.innerText = `${curStateName} ${isOpen ? boundComm : ''}`;
+        if (commState === COMMISSION_STATE.ERROR) spawnAlert("$error:status", 'ERROR')
+    }
+    else
+    {
+        spawnAlert("$error:generic", 'ERROR')
+    }
+}
 
 async function getList(ignoreArchiveCard = true)
 {
@@ -49,8 +74,6 @@ async function getList(ignoreArchiveCard = true)
             }
         }
 
-        // console.log(LIST_ID);
-
         for (let card in CARDS_DATA)
         {
             var curCard = CARDS_DATA[card];
@@ -82,7 +105,12 @@ async function getList(ignoreArchiveCard = true)
 
     }
 }
- 
+
+connectSignal('loaded', function(callTimes){
+    updateCommText()
+    return
+})
+
 getList().then(res => {
     let maxT = res.tasks.length;
     let maxC = res.maxCommission;
@@ -92,6 +120,9 @@ getList().then(res => {
     // If MAX TASK is >= MAX COMMISSION then commission are FULL ex: 10/10
     // If any theses conditions nothing happen, then commission are OPEN ex: 1/5
 
+    commStateConfig.max = maxT
+    commStateConfig.cur = maxC
+
     commState = (res.status === 'OK')
     ?(maxC > 0) 
         ?(maxT >= maxC)
@@ -100,28 +131,9 @@ getList().then(res => {
         :COMMISSION_STATE.CLOSED
     :
         COMMISSION_STATE.ERROR
-    
-    // console.log(commState)
-    // spawnAlert("$error:status", 'ERROR')
-    switch(commState)
-    {
-        case COMMISSION_STATE.OPEN:
-            statusText.innerText = `OPEN ${maxT}/${maxC}`;
-            break;
-        case COMMISSION_STATE.CLOSED:
-            statusText.innerText = "CLOSED";
-            break;
-        case COMMISSION_STATE.FULL:
-            statusText.innerText = `FULL ${maxC}/${maxC}`;
-            break;
-        case COMMISSION_STATE.ERROR:
-            statusText.innerText = ':/ Error'
-            
-            spawnAlert("$error:status", 'ERROR')
-            break;
-        default:
-            spawnAlert("$error:generic", 'ERROR')
-    }
+
+    for (const state in COMMISSION_STATE) if (COMMISSION_STATE[state] == commState) commStateConfig.id = state.toLowerCase()
+    updateCommText()
 });
 
 

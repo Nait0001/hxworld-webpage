@@ -1,0 +1,37 @@
+{
+    "status-commission-text": "<strong>Commission Status:<br>!<span id=\"status\">LOADING...</span>!</strong>",
+    "status-commision-states": {
+        "wait": "Carregando...",
+        "closed": "FECHADO",
+        "full": "CHEIO",
+        "open": "ABERTO",
+        "error": "ERRO"
+    },
+
+    "title-guide": "Guia",
+
+
+    "title-about": "Sobre Mim",
+    "about": [
+        "Olá, sou a Nati, programadora freelancer!",
+        "Adoro ajudar projetos e, nas horas vagas, gosto de desenhar e aprender coisas novas.",
+        "<br>Tenho conhecimento das tecnologias:"
+    ],
+
+    "title-bit-by-bit": "Passo a Passo",
+    "bit-by-bit": [
+        "Para me pedir comissões, é só me enviar dm no <strong>Discord</strong> ou <strong>Twitter</strong> (nait0001 em ambos)!",
+        "A negociação do pagamento é bem simples: você descreve o que deseja e, a partir disso, faço a estimativa de preço e prazo de entrega.",
+        "Caso queira, podemos call para ver o andamento do projeto."
+    ],
+
+    "title-important": "Importante",
+    "important": [
+        "A correção de bugs, obviamente, não é cobrada.",
+        "Formas de pagamento somente <strong>PIX</strong> e <strong>PAYPAL</strong>.",
+        "Peço permissão antes de divulgar os projetos finalizados das comissões que programei.",
+        "Sem reembolso caso não haja satisfação com o projeto final.",
+        "Caso vá postar você mesmo, por favor, me dê os créditos.."
+    ]
+
+}

@@ -3,6 +3,14 @@
     --bg-color: linear-gradient(to bottom, #FED6B3 0%, #B7718D 72%);
 }
 
+/* Loading */
+body {
+    opacity: 0;
+}
+
+body.loaded {
+    opacity: 1;
+}
 
 li {
     padding-top: 2px;
@@ -12,6 +20,42 @@ main
 {
     word-wrap: break-word;    
     list-style-position: inside;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    text-align: center;
+    /* gap: 10; */
+    width: 100%;
+    flex-wrap: wrap;
+    
+    a {
+        width: 40%;
+        img{
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+
+    div {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 0;
+       padding: 0;
+       justify-content: center;
+       box-sizing: border-box;
+       padding-bottom: 25px;
+
+       * {
+         margin: 0;
+         padding: 5px 0;
+       }
+    }
+    /* gap: 10px; */
+    
 }
 
 body{background: var(--bg-color);}
