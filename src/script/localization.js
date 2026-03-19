@@ -1,4 +1,4 @@
-import {connectSignal, emmitSignal} from './utils.js';
+import {emmitSignal} from './utils.js';
 
 let inputLang = document.getElementById('language-list')
 const DEFAULT_LANG = "en"
